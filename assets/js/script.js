@@ -29,7 +29,7 @@
 
   //Populates the main area with current weather data based on the incoming city
   function populateCity(cityName){
-    var mainQuery = "httpss://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey + "&units=imperial";
+    var mainQuery = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey + "&units=imperial";
     console.log(cityName)
     cityDisplayName.text(cityName)
     $.ajax({
