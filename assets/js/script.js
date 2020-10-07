@@ -60,6 +60,7 @@
 
   //Updates the array and pushes to local storage
   function populateHistory(cityName){
+    if(!citiesArr.includes(cityName))
     citiesArr.push(cityName);
     localStorage.setItem("citiesArrStorage", JSON.stringify(citiesArr));
     $(".pastCities").empty();
