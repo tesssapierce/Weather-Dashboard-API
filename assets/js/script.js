@@ -29,7 +29,7 @@
 
   //Populates the main area with current weather data based on the incoming city
   function populateCity(cityName){
-    var mainQuery = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey + "&units=imperial";
+    var mainQuery = "httpss://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey + "&units=imperial";
     console.log(cityName)
     cityDisplayName.text(cityName)
     $.ajax({
@@ -41,11 +41,11 @@
       currentHumidity.text(response.main.humidity);
       currentWind.text(response.wind.speed)
       currentSummary.text(response.weather[0].description)
-      var currentImg = $("<img>").attr("src","http://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
+      var currentImg = $("<img>").attr("src","https://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
       currentSummary.append(currentImg);
       var lat = response.coord.lat
       var lon = response.coord.lon
-      var uvQuery = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
+      var uvQuery = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
       $.ajax({
         url: uvQuery,
         method: "GET"
@@ -82,7 +82,7 @@
 
   //Creates the five day forecast information below the current weather
   function fiveDayForecast(cityName){
-    fiveDayQuery = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + cityName + "&cnt=5&appid=166a433c57516f51dfab1f7edaed8413" + "&units=imperial";
+    fiveDayQuery = "https://api.openweathermap.org/data/2.5/forecast/daily?q=" + cityName + "&cnt=5&appid=166a433c57516f51dfab1f7edaed8413" + "&units=imperial";
     console.log(fiveDayQuery)
     $(".forecast-days").empty();
     $.ajax({
@@ -93,7 +93,7 @@
 
       for (i=0; i<response.list.length; i++){
         var forecastDay = dayjs(response.list[i].dt)
-        var forecastImg = "http://openweathermap.org/img/w/" + response.list[i].weather[0].icon + ".png"
+        var forecastImg = "https://openweathermap.org/img/w/" + response.list[i].weather[0].icon + ".png"
         var forecastTemp = response.list[i].temp.day
         var forecastHumidity = response.list[i].humidity
         var currentDayDiv = $(".day" + i)
