@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <main>
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-12">
+          <h1>Weather Dashboard</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 left-aside">
+          <h2>Search</h2>
+          <input class="form-control data-city-name" type="text" placeholder="enter a city">
+          <button type="submit" class="submit">Search</button>
+          <div class="pastCities">
+          </div>
+        </div>
+        <div class="col-10 right-main">
+          <div class="top-main">
+            <h2 class="city-name"></h2>
+            <h3 class="current-summary"></h3>
+            <p>Temperature: <span class="current-temp"></span></p>
+            <p>Humidity: <span class="current-humidity"></span></p>
+            <p>Wind Speed: <span class="current-wind"></span></p>
+            <p>UV Index: <span class="current-uv"></span></p>
+          </div>
+          <div class="row">
+            <h2>5-Day Forecast</h2>
+          </div>
+          <div class="row">
+            <div class="forecast-days day0 col-2"></div>
+            <div class="forecast-days day1 col-2"></div>
+            <div class="forecast-days day2 col-2"></div>
+            <div class="forecast-days day3 col-2"></div>
+            <div class="forecast-days day4 col-2"></div>
+          </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

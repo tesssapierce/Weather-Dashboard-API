@@ -1,0 +1,73 @@
+body {
+  background-color: #7493AC;
+  color: #171A21;
+}
+
+.container-fluid{
+  padding: 20px;
+}
+
+h1 {
+  background-color: #274060;
+  padding: 20px;
+  margin: 20 auto;
+  text-align: center;
+  border-radius: .25rem;
+}
+
+h2.city-name {
+  font-size: 40px;
+  color: #171A21
+}
+
+.left-aside {
+  background-color: #F5F1ED;
+  /* margin-left: 15px; */
+  /* margin: 20px; */
+  border-radius: .25rem;
+}
+
+.right-main{
+  background-color: #F5F1ED;
+  /* margin-left: -15px; */
+  border-radius: .25rem;
+}
+
+.forecast-days {
+  background-color: #92BCEA;
+  border-radius: .25rem;
+  margin: 5px;
+}
+
+.top-main {
+  /* background-color: #92BCEA; */
+  border-radius: .25rem;
+}
+
+button {
+  background-color: #92BCEA;
+  border-radius: .25rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  margin: 10px;
+}
+
+button.pastSearchCity {
+  display: block;
+  margin: 10px auto;
+}
+
+
+/* Colors:
+#AFB3F7 - Maximum Blue Purple (Light)
+#92BCEA - Baby Blue Eyes (Light Medium)
+#7493AC - Shadow Blue (Medium)
+#617073 - Cadet (Medium Dark)
+#171A21 - Raisin Black (Dark) */
