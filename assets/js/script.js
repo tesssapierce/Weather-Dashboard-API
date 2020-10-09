@@ -1,17 +1,3 @@
-
-//TODO:
-//User will see a weather dashboard
-//Design will be in bootstrap
-  //1 Row - H1
-  //1 Row - Search + History (3 cols), Current Weather and 5-Day Forcast (9 cols)
-    //5 Day Forcast will be created with a loop
-//When user searches for a city, it will be added to their history list
-  //When user clicks Search, store city name to local storage
-  //Display local storage (array) below as history
-//When user searches for a city, it will display the current weather as well as 5 day weather forcast
-  //When user clicks Search, ping API to get information for current weather information
-  //Get API Connection working
-
   var apiKey = "2a24cb245fb54c82b434c69da084d78f";
   var currentSummary = $(".current-summary");
   var currentTemp = $(".current-temp");
@@ -51,7 +37,15 @@
         method: "GET"
       }).then(function(response){
         console.log(response)
-        currentUV.text(response.value)
+        var uvValue = response.value
+        currentUV.text(uvValue)
+        if (uvValue < 3){
+          currentUV.css("background-color", "green")
+        } if (uvValue > 3 && uvValue < 8){
+          currentUV.css("background-color", "yellow")
+        } if (uvValue > 8){
+          currentUV.css("background-color", "red")
+        }
       })
     })
     populateHistory(cityName);
@@ -109,6 +103,8 @@
   
   //Populate past searches on page load
   createButtons()
+
+  //Runs weather for Denver
   populateCity("Denver")
 
   //User clicks on past history 
