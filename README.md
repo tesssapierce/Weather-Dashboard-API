@@ -30,7 +30,7 @@ THEN I am presented with the last searched city forecast
 
 GitHub URL: https://github.com/tesssapierce/hw06-weather-dashboard-api
 
-GitPage URL: https://tesssapierce.github.io/Weather-Dashboard-API/.
+GitPage URL: https://tesssapierce.github.io/Weather-Dashboard-API/
 
 
 ## How to use
