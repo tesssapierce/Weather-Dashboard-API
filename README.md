@@ -1,5 +1,4 @@
-# homework06
-## 06 Weather Dashboard
+# Weather Dashboard
 
 ## User Story
 
